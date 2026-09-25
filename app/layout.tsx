@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body className="font-sans">
         {children}
+        <GoogleAnalytics gaId="G-ZPYQ2T4P2J" />
         <footer className="border-t border-line py-6 text-center text-sm text-muted">© {new Date().getFullYear()} FreeCodeDocs. All rights reserved.</footer>
       </body>
     </html>
